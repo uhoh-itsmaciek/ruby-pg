@@ -1587,7 +1587,7 @@ pgconn_s_escape_bytea(VALUE self, VALUE str)
 	from      = (unsigned char*)RSTRING_PTR(str);
 	from_len  = RSTRING_LEN(str);
 
-	if(rb_obj_class(self) == rb_cPGconn) {
+	if(rb_obj_is_kind_of(self, rb_cPGconn)) {
 		to = PQescapeByteaConn(pg_get_pgconn(self), from, from_len, &to_len);
 	} else {
 		to = PQescapeBytea( from, from_len, &to_len);
