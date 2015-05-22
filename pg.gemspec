@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["-f", "fivefish", "-t", "pg: The Ruby Interface to PostgreSQL", "-m", "README.rdoc"]
   s.required_ruby_version = Gem::Requirement.new(">= 1.9.3")
   s.rubygems_version = "2.4.5"
-  s.signing_key = "~/.gem/gem-private_key.pem"
   s.summary = "Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/]"
 
   if s.respond_to? :specification_version then
